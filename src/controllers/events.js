@@ -21,15 +21,15 @@ export const getAllEventsController = async (req, res) => {
 export const getEventByIDController = async (req, res, _next) => {
   const { eventId } = req.params;
 
-  const event = await getEventByID(eventId);
+  const members = await getEventByID(eventId);
 
-  if (!event) {
-    throw createHttpError(404, 'Student not found');
+  if (!members) {
+    throw createHttpError(404, 'Event not found');
   }
 
   res.json({
     status: 200,
     message: `Successfully found event with id ${eventId}!`,
-    data: event,
+    data: members,
   });
 };

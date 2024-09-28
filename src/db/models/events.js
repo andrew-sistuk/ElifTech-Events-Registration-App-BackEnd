@@ -8,6 +8,46 @@ const eventsSchema = new Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: true,
+    },
+    event_date: {
+      type: Date,
+      required: true,
+    },
+    organizer: {
+      type: String,
+      required: true,
+    }
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  },
+);
+
+const membersSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    eventId: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    birthDate: {
+      type: Date,
+      required: true,
+    },
+    comment: {
+      type: String,
+    }
   },
   {
     timestamps: true,
@@ -16,3 +56,4 @@ const eventsSchema = new Schema(
 );
 
 export const eventsCollection = model('events', eventsSchema);
+export const membersCollection = model('members', membersSchema);
