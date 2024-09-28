@@ -25,3 +25,7 @@ export const getEventByID = async (eventId) => {
   // return eventsCollection.findOne({ eventId });
   return membersCollection.find({ eventId: { $eq: eventId } });
 };
+
+export const addMember = async payload => {
+  return membersCollection.create(payload);
+};

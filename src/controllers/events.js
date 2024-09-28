@@ -1,4 +1,4 @@
-import { getAllEvents, getEventByID } from '../services/events.js';
+import { addMember, getAllEvents, getEventByID } from '../services/events.js';
 import createHttpError from 'http-errors';
 import { parsePaginationParams } from '../utils/parsePaginationParams.js';
 
@@ -31,5 +31,17 @@ export const getEventByIDController = async (req, res, _next) => {
     status: 200,
     message: `Successfully found event with id ${eventId}!`,
     data: members,
+  });
+};
+
+export const addMemberController = async (req, res) => {
+  const { eventId } = req.params;
+
+  const member = await addMember({ ...req.body, eventId});
+
+  res.status(201).json({
+    status: 201,
+    message: 'Successfully created a member!',
+    data: member,
   });
 };
