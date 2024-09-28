@@ -30,7 +30,6 @@ export const memberSchemaAdd = Joi.object({
     .min(3)
     .max(20)
     .valid(...WHERE_MEMBER_HEAR)
-    .required()
     .messages({
       'string.base': 'Field {#label} should be a string',
       'string.min': 'Field {#label} should have at least {#limit} characters',
