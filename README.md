@@ -1,35 +1,18 @@
-# Main changes
+#Main info 
 
-## Preinstall
+## Install
 
+npm install 
 
-1. ...
+## Start
 
-## Settings
-
-1. ...
-
-## Libraries
-
-1. cors
-2. dotenv
-3. express
-4. mongoose
-5. pino-http
-6. pino-pretty
-7. http-errors
-8. joi
-
-## Code
-
-1. add eslint
-2. .editorconfig
-3. .env
-4. app.use(express.json());
+npm start
 
 
-## Future features
+## Routes
 
-1) add jsconfig.js
-2) add pagination from external library
-3)
+route - /events
+route - /events/:eventId/view
+router - /events/:eventId/register
+
+P.S credebtial you can see in .env.example
