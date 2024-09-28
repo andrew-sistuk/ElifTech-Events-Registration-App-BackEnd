@@ -8,6 +8,7 @@ const parseSortOrder = (sortOrder) => {
   return SORT_ORDER.ASC;
 };
 
+
 const parseSortBy = (sortBy) => {
   const keysOfEvents = [
     'title',
