@@ -20,8 +20,8 @@ export const memberSchemaAdd = Joi.object({
       'string.max': 'Field {#label} should have at most {#limit} characters',
       'any.required': 'Field {#label} is required',
     }),
-  comment: Joi.string().messages({
-    'boolean.base': 'Field {#label} should be a bool',
+  comment: Joi.string().allow('').messages({
+    'string.base': 'Field {#label} should be a string',
   }),
   birthDate: Joi.date().required().messages({
     'string.base': 'Field {#label} should be a string',
