@@ -9,6 +9,6 @@ const router = Router();
 
 router.get('/events', ctrlWrapper(getAllEventsController));
 
-router.get('/events/:eventId', ctrlWrapper(getEventByIDController));
+router.get('/events/:eventId/view', ctrlWrapper(getEventByIDController));
 
 export default router;
